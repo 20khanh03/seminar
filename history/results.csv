@@ -1,0 +1,23 @@
+Time,Text,Sentiment,Confidence
+2025-12-05 17:54:49,chán quá,negative,0.747
+2025-12-05 17:55:00,đi chơi,neutral,0.4123
+2025-12-05 17:55:18,đi ngủ thui,neutral,0.367
+2025-12-05 17:55:24,fjrqe k,negative,0.4032
+2025-12-05 17:55:34,hehe,positive,0.4911
+2025-12-05 19:32:19,yêu em,negative,0.5472
+2025-12-05 19:49:03,món ăn này dở quá,neutral,0.5041
+2025-12-05 19:49:21,hôm nay tôi rất vui ,negative,0.5424
+2025-12-05 23:31:09,món này dở quá,Tiêu cực,0.9862
+2025-12-05 23:31:30,hôm nay trời rất đẹp,Tích cực,0.9913
+2025-12-05 23:32:37,hôm nay tôi rất vui,Tích cực,0.9869
+2025-12-05 23:32:44,thời tiết bình thường,Trung tính,0.872
+2025-12-05 23:32:54,rat vui hom nay,Tích cực,0.9927
+2025-12-05 23:33:06,công việc ổn định,Trung tính,0.5495
+2025-12-05 23:33:18,phim này hay lắm,Tích cực,0.9402
+2025-12-05 23:33:29,tôi buồn vì thất bại,Tiêu cực,0.983
+2025-12-05 23:33:38,ngày mai phải đi học,Trung tính,0.8742
+2025-12-05 23:33:40,ngày mai phải đi học,Trung tính,0.8742
+2025-12-05 23:33:52,cảm ơn bạn rất nhiều,Tích cực,0.992
+2025-12-05 23:34:03,mệt mỏi quá hôm nay,Tiêu cực,0.887
+2025-12-05 23:34:49,sdv s ,Trung tính,0.8402
+2025-12-05 23:34:56,dbvaCF ,Trung tính,0.901
