@@ -43,29 +43,20 @@ seminar/
 │   ├── predict.py          # Hàm dự đoán cảm xúc
 │
 ├── history/
-│   └── results.csv          # Lưu lịch sử phân tích
-│
-└── venv/                    # Môi trường ảo (không push lên GitHub)
+    └── results.csv          # Lưu lịch sử phân tích
 ```
 
 ---
 
 ## 4. Cách cài đặt và chạy chương trình
 
-### Bước 1: Tạo môi trường ảo
-
-```bash
-python -m venv venv
-venv\Scripts\activate     (Windows)
-```
-
-### Bước 2: Cài đặt thư viện
+### Bước 1: Cài đặt thư viện
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Bước 3: Chạy ứng dụng
+### Bước 2: Chạy ứng dụng
 
 ```bash
 streamlit run app.py
@@ -128,6 +119,5 @@ Dự án có thể mở rộng thêm các chức năng sau:
 
 ## 8. Tác giả
 
-Sinh viên thực hiện: [Bổ sung họ tên tại đây]
-Môn học / Seminar: [Bổ sung tại đây]
-Ngày thực hiện: [Bổ sung tại đây]
+Sinh viên thực hiện: Trần Hoàng Khanh
+Môn học : Seminar
