@@ -1,17 +1,14 @@
-import os
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import pipeline
+import streamlit as st
 
-# Đổi tên model thành đường dẫn thư mục
-MODEL_PATH = "./model_files" 
+@st.cache_resource
+def load_model():
+    model_name = "wonrax/phobert-base-vietnamese-sentiment"
 
-def load_sentiment_model():
-    print(f"Đang tải model từ {MODEL_PATH}...")
+    sentiment_pipeline = pipeline(
+        task="sentiment-analysis",
+        model=model_name,
+        tokenizer=model_name
+    )
     
-    # Kiểm tra xem thư mục có tồn tại không để tránh crash
-    if not os.path.exists(MODEL_PATH):
-        raise FileNotFoundError(f"Không tìm thấy thư mục model tại {MODEL_PATH}. Hãy chạy script tải model trước!")
-
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_PATH)
-    
-    return tokenizer, model
+    return sentiment_pipeline
