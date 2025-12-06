@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 streamlit
 torch
 transformers
 pandas
+=======
+streamlit
+torch
+transformers
+pandas
+>>>>>>> 2ac2bec78fed13c650401d3366ce58fe4ef82832
 pyvi  

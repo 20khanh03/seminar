@@ -6,7 +6,7 @@ import pandas as pd
 
 from src.predict import predict_sentiment
 
-# ========== GIAO DIỆN ==========
+#  GIAO DIỆN 
 st.set_page_config(page_title="Sentiment Analysis App", page_icon="️🎭")
 
 st.title("Ứng dụng Phân loại Cảm xúc Tiếng Việt")
@@ -16,7 +16,7 @@ text = st.text_input("Tối đa 50 ký tự")
 
 DATABASE = "history/sentiment.db"
 
-# ========== TẠO DATABASE ==========
+#  TẠO DATABASE 
 def init_db():
     import os
     os.makedirs("history", exist_ok=True)
@@ -35,7 +35,7 @@ def init_db():
     conn.close()
 
 
-# ========== LƯU DỮ LIỆU ==========
+#  LƯU DỮ LIỆU 
 def save_history(text, sentiment):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -49,7 +49,7 @@ def save_history(text, sentiment):
     conn.close()
 
 
-# ========== LẤY LỊCH SỬ ==========
+# LẤY LỊCH SỬ 
 def get_history():
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -70,7 +70,7 @@ def get_history():
 init_db()
 
 
-# ========== NÚT PHÂN LOẠI ==========
+#  NÚT PHÂN LOẠI 
 if st.button("Phân loại cảm xúc"):
 
     result, error = predict_sentiment(text)
@@ -81,8 +81,8 @@ if st.button("Phân loại cảm xúc"):
         st.success(f"Kết Quả : {result['sentiment']}")
         save_history(result["text"], result["sentiment"])
 
-# ========== HIỂN THỊ LỊCH SỬ ==========
-st.subheader("📜 Lịch Sử Phân Tích")
+#  HIỂN THỊ LỊCH SỬ 
+st.subheader("Lịch Sử Phân Tích")
 
 history = get_history()
 
@@ -101,7 +101,6 @@ else:
         columns=["Nội dung", "Cảm xúc", "Thời gian"]
     )
 
-    # ĐỔI TEXT CẢM XÚC ĐỂ HIỂN THỊ
     df["Cảm xúc"] = df["Cảm xúc"].str.lower().map({
         "positive - tích cực": "Tích cực",
         "positive": "Tích cực",
@@ -130,8 +129,8 @@ else:
 
     # NÚT TẢI THÊM
     if st.session_state.show_limit < len(history):
-        if st.button("🔽 Tải thêm"):
+        if st.button("Tải thêm"):
             st.session_state.show_limit += 15
             st.rerun()
     else:
-        st.success("✅ Đã hiển thị tất cả dữ liệu")
+        st.success("Đã hiển thị tất cả dữ liệu")
